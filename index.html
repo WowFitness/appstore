@@ -2,24 +2,62 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>App Download</title>
+  <title lang="en">App Download</title>
+  <title lang="zh-CN">应用下载</title>
+  <title lang="zh-TW">應用下載</title>
+  <title lang="ja">アプリダウンロード</title>
+  <title lang="ko">앱 다운로드</title>
+  <title lang="pt">Download do aplicativo</title>
+  <title lang="ru">Скачать приложение</title>
+  <title lang="tr">Uygulama İndirme</title>
 </head>
 <body>
 
   <script type="text/javascript">
     var userAgent = navigator.userAgent.toLowerCase();
 
+    var lang = navigator.language || navigator.userLanguage;
+
+    var appStoreUrl = 'https://apps.apple.com/app/id1624214488';
+    var googlePlayUrl = 'https://play.google.com/store/apps/details?id=com.weightloss.zero.intermittent.bodyfast.fastingtracker';
+    var defaultUrl = appStoreUrl;
+
     if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
-      
-      window.location.href = 'https://apps.apple.com/app/id1624214488';
+
+      window.location.href = appStoreUrl;
     } else if (userAgent.indexOf('android') !== -1) {
-      
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.weightloss.zero.intermittent.bodyfast.fastingtracker';
+
+      window.location.href = googlePlayUrl;
     } else {
-      
-      alert('Sorry, your device is not supported!');
+
+      window.location.href = defaultUrl;
     }
   </script>
 
+  <button onclick="location.href=appStoreUrl">
+
+    <span lang="en">Download on the App Store</span>
+    <span lang="zh-CN">在 App Store 下载</span>
+    <span lang="zh-TW">在 App Store 下載</span>
+    <span lang="ja">App Store でダウンロード</span>
+    <span lang="ko">App Store에서 다운로드</span>
+    <span lang="pt">Baixar na App Store</span>
+    <span lang="ru">Загрузить в App Store</span>
+    <span lang="tr">App Store'da İndir</span>
+  </button>
+
+  <button onclick="location.href=googlePlayUrl">
+
+    <span lang="en">Get it on Google Play</span>
+    <span lang="zh-CN">在 Google Play 下载</span>
+    <span lang="zh-TW">在 Google Play 下載</span>
+    <span lang="ja">Google Play で入手する</span>
+    <span lang="ko">Google Play에서 받으세요</span>
+    <span lang="pt">Obter na Google Play</span>
+    <span lang="ru">Скачать в Google Play</span>
+    <span lang="tr">Google Play'den Alın</span>
+  </button>
+
 </body>
 </html>
+
