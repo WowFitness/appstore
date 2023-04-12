@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>App Download</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <style>
+    
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 22px;
+      background-color: white;
+      color: black;
+      margin-top: 30px;
+      min-width: 172px;
+    }
+
+    
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+
+  <script type="text/javascript">
+    var userAgent = navigator.userAgent.toLowerCase();
+
+    if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1 || userAgent.indexOf('macintosh') !== -1) {
+      
+      // window.location.href = 'https://apps.apple.com/app/id1624214488';
+    } else if (userAgent.indexOf('android') !== -1) {
+      
+      window.location.href = 'https://play.google.com/store/apps/details?id=com.weightloss.zero.intermittent.bodyfast.fastingtracker';
+    } else {
+      
+    }
+  </script>
+
+  <div class="button-container">
+    <button onclick="location.href='https://apps.apple.com/app/id1624214488'">App Store</button>
+    <button onclick="location.href='https://play.google.com/store/apps/details?id=com.weightloss.zero.intermittent.bodyfast.fastingtracker'">Google Play</button>
+  </div>
+
+</body>
+</html>
