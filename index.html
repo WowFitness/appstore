@@ -32,7 +32,7 @@
   <script type="text/javascript">
     var userAgent = navigator.userAgent.toLowerCase();
 
-    if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1) {
+    if (userAgent.indexOf('iphone') !== -1 || userAgent.indexOf('ipad') !== -1 || userAgent.indexOf('macintosh') !== -1) {
       
       window.location.href = 'https://apps.apple.com/app/id1624214488';
     } else if (userAgent.indexOf('android') !== -1) {
@@ -40,7 +40,6 @@
       window.location.href = 'https://play.google.com/store/apps/details?id=com.weightloss.zero.intermittent.bodyfast.fastingtracker';
     } else {
       
-      alert('Sorry, your device is not supported!');
     }
   </script>
 
